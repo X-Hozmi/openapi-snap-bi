@@ -129,6 +129,23 @@ X-EXTERNAL-ID: 1234567890
 }
 ```
 
+**3. Virtual Account Payment**
+```http
+POST /openapi/v1.0/transfer-va/payment
+Authorization: Bearer <your_access_token>
+X-TIMESTAMP: 2025-03-29T21:06:32+07:00
+X-SIGNATURE: <base64_encoded_hmac_sha512_signature>
+X-PARTNER-ID: 51112
+X-EXTERNAL-ID: 1234567890
+
+{
+  "partnerServiceId": " 51112",
+  "customerNo": "1234567890",
+  "virtualAccountNo": " 511121234567890",
+  "trxDateTime": "2025-03-29T21:06:32+07:00"
+}
+```
+
 ## Where users can get help
 
 * **Bank Indonesia SNAP Documentation:** Familiarize yourself with the official [SNAP specifications](https://developer.bi.go.id/) for detailed parameter and signature generation rules.
